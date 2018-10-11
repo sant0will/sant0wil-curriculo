@@ -865,13 +865,17 @@ h6 {
 @media (max-width: 450px) {
     .margins {
         margin-left: 1rem;
-    }
+	}
+	
 }
-@media (max-width: 740px) {
+@media (max-width: 770px) {
     .full-height,
     .full-height body,
     .full-height header,
     .full-height header .view {
         height: 1040px;
-    }
+	}
+	.lang_logos, .info-person{
+		display: none!important;
+	}
 }
