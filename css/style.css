@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
+@font-face {
+    font-family: Hossa;
+    src: url(../fonts/hossa/Hossa-Medium.otf);
+}
+
 body, html{
 	height: 100%;
 	width:100%;
@@ -67,6 +72,16 @@ i.box-circle-solid{
     line-height: 55px;
     text-align: center;
     width: 55px;
+}
+i.box-circle-solid-lang{
+	background-color:#007bff;
+	border-radius: 5%;
+    color: #fff;
+    font-size: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+	width: 500px;
 }
 .text-underline-white:before{
 	content:"";
@@ -801,3 +816,62 @@ ul.social-box li {
     }
 }
 .btn-theme{background-color:#35CBDF; color:#fff;}
+
+.row-content{
+	height: 100%;
+}
+.profissao{
+	color: #fff;
+	font-family: Hossa;
+	font-weight: lighter;
+	font-size: 50px;
+}
+.nome{
+	color: #fff;
+	font-family: Hossa;
+	font-weight: bold;
+	font-size: 80px;
+}
+.intro-2 {
+    background: url("../img/logo_codigophp.jpg")no-repeat center center;
+	background-size: cover;
+	height: 100%;
+}
+.btn .fa {
+    /* margin-left: 3px; */
+}
+.top-nav-collapse {
+    background-color: #424f95 !important;
+}
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #424f95 !important;
+    }
+}
+h6 {
+    line-height: 1.7;
+}
+.hm-gradient .full-bg-img {
+	height: 100%;
+    background: -moz-linear-gradient(45deg, rgba(61, 121, 241, 0.6), rgba(29, 210, 177, 0.6) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(61, 121, 241, 0.6), rgba(29, 210, 177, 0.6) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(61, 121, 241, 0.6)), to(rgba(29, 210, 177, 0.6)));
+    background: -o-linear-gradient(45deg, rgba(61, 121, 241, 0.6), rgba(29, 210, 177, 0.6) 100%);
+    background: linear-gradient(to 45deg, rgba(61, 121, 241, 0.6), rgba(29, 210, 177, 0.6) 100%);
+}
+@media (max-width: 450px) {
+    .margins {
+        margin-left: 1rem;
+    }
+}
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 1040px;
+    }
+}
