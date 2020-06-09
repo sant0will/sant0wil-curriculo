@@ -15,15 +15,12 @@ if($_POST) {
 
    $name = trim(stripslashes($_POST['name']));
    $email = trim(stripslashes($_POST['email']));
-   $subject = trim(stripslashes($_POST['subject']));
+   $subject = 'Contato pelo site!';
    $contact_message = trim(stripslashes($_POST['message']));
 
-   
-	if ($subject == '') { $subject = "Contact Form Submission"; }
-
    // Set Message
-   $message .= "Email from: " . $name . "<br />";
-	 $message .= "Email address: " . $email . "<br />";
+   $message = "Email from: " . $name . "<br />";
+	$message .= "Email address: " . $email . "<br />";
    $message .= "Message: <br />";
    $message .= nl2br($contact_message);
    $message .= "<br /> ----- <br /> This email was sent from your site " . url() . " contact form. <br />";
@@ -36,8 +33,8 @@ if($_POST) {
 	$headers .= "Reply-To: ". $email . "\r\n";
  	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	$headers .= 'X-Mailer: PHP/' . phpversion();
 
-   ini_set("sendmail_from", $to); // for windows server
    $mail = mail($to, $subject, $message, $headers);
 
 	if ($mail) { echo "OK"; }
